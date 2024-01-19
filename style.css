@@ -1,15 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 21px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #instructions {
-  background-color: rgb(183, 212, 240);
+  background-color: rgb(200, 227, 238);
   text-align: center;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 #instructions h1 {
@@ -18,10 +18,31 @@
 }
 
 #instructions h3 {
-  color: rgb(97, 101, 104);
+  color: rgb(91, 95, 99);
 }
 
 .input-area {
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(237, 245, 248);
+}
+
+#input-form {
+
+}
+
+#imageurl, #toptext, #bottomtext {
+  width: 50%;
+  padding-left: 4px;
+}
+
+#input-form button {
+  font-size: 0.95em;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-color: rgb(164, 173, 177);
+  background-color: rgb(176, 236, 247);
+  color: rgb(46, 53, 53);
+  border-radius: 8px;
 }
