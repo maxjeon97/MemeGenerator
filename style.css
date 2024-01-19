@@ -22,7 +22,7 @@
 }
 
 .input-area {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-left: 20px;
   padding-bottom: 20px;
   background-color: rgb(237, 245, 248);
@@ -41,4 +41,9 @@
   background-color: rgb(176, 236, 247);
   color: rgb(46, 53, 53);
   border-radius: 8px;
+}
+
+#output {
+  padding-top: 15px;
+  padding-left: 20px;
 }
