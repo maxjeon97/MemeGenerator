@@ -30,7 +30,7 @@ function generateMeme(url, topText, botText) {
 
   meme.addEventListener("mouseover", function(e) {
     deleteButton.style.opacity = "0.9";
-    image.style.filter = "brightness(10%)";
+    image.style.filter = "brightness(80%)";
   });
 
   meme.addEventListener("mouseout", function(e) {
