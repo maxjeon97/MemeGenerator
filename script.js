@@ -1,20 +1,8 @@
 const form = document.querySelector("#input-form");
-const url = document.querySelector("input[name='url']");
-const topText = document.querySelector("input[name='top']");
-const botText = document.querySelector("input[name='bot']");
+const url = document.querySelector("#imageurl");
+const topText = document.querySelector("#toptext");
+const botText = document.querySelector("#bottomtext");
 const output = document.querySelector("#output");
-
-form.addEventListener("submit", function(e) {
-  if(url.value == "" || topText.value == "" || botText.value == "") {
-    return false;
-  }
-  e.preventDefault();
-  const newMeme = generateMeme(url, topText, botText);
-  output.appendChild(newMeme);
-  url.value = "";
-  topText.value = "";
-  botText.value = "";
-});
 
 function generateMeme(url, topText, botText) {
   const meme = document.createElement("div");
@@ -36,17 +24,37 @@ function generateMeme(url, topText, botText) {
   meme.appendChild(image);
   meme.appendChild(deleteButton);
 
-  deleteButton.addEventListener("click", function(e) {
+  meme.addEventListener("click", function(e) {
     meme.remove();
   });
 
-  deleteButton.addEventListener("mouseover", function(e) {
+  meme.addEventListener("mouseover", function(e) {
     deleteButton.style.opacity = "0.9";
     image.style.filter = "brightness(10%)";
   });
 
+  meme.addEventListener("mouseout", function(e) {
+    deleteButton.style.opacity = "0";
+    image.style.filter = "brightness(100%)";
+  });
+
   return meme;
 }
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  if(url.value == "" || topText.value == "" || botText.value == "") {
+    return false;
+  }
+  const newMeme = generateMeme(url, topText, botText);
+  output.appendChild(newMeme);
+  url.value = "";
+  topText.value = "";
+  botText.value = "";
+});
+
+
+
 
 
 
