@@ -47,3 +47,26 @@
   padding-top: 15px;
   padding-left: 20px;
 }
+
+.meme {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.topText {
+  color: black;
+}
+
+.botText {
+  color: black;
+}
+
+.meme-image {
+  width: 400px;
+  height: 400px;
+}
+
+.delete-button {
+  opacity: 0;
+  transition: 0.5;
+}
